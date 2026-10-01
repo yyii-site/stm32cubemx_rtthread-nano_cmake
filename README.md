@@ -97,3 +97,9 @@ STM32F407xx_FLASH.ld
 ```
 
 至此 rtthread-nano 和 finsh 均正常运行
+
+
+## 参考链接
+
+RTThread 官方视频，但是 STM32CubeMX MDK 的 https://youtu.be/H2YnvuBm7DY?si=wcsdtRll8lDpmJob
+
