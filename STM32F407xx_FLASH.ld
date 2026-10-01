@@ -104,6 +104,26 @@ SECTIONS
     . = ALIGN(4);
   } >FLASH
 
+  /* ====== RT-Thread 自动初始化函数指针段 ====== */
+  .rti_fn (READONLY) :
+  {
+    . = ALIGN(4);
+    __rt_init_start = .;
+    KEEP(*(SORT(.rti_fn*)))
+    __rt_init_end = .;
+    . = ALIGN(4);
+  } >FLASH
+
+  /* ====== RT-Thread FinSH 命令导出符号表段 ====== */
+  FSymTab (READONLY) :
+  {
+    . = ALIGN(4);
+    __fsymtab_start = .;
+    KEEP(*(FSymTab))
+    __fsymtab_end = .;
+    . = ALIGN(4);
+  } >FLASH
+
   .ARM.extab (READONLY) : /* The "READONLY" keyword is only supported in GCC11 and later, remove it if using GCC10 or earlier. */
   {
     . = ALIGN(4);
