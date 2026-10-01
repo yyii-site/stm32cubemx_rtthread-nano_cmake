@@ -1,0 +1,63 @@
+# CMake 构建输出目录
+/build/
+
+
+# STM32Cubemx 生成的内容
+/cmake/
+/Drivers/
+/Middlewares/Third_Party/RealThread_RTOS_RT-Thread
+/RT-Thread/
+.mxproject
+CMakePresets.json
+
+# 源码
+Core/Inc/stm32f4xx_hal_conf.h
+Core/Inc/stm32f4xx_it.h
+
+Core/Src/stm32f4xx_hal_msp.c
+Core/Src/stm32f4xx_hal_timebase_tim.c
+Core/Src/stm32f4xx_it.c
+Core/Src/syscalls.c
+Core/Src/sysmem.c
+Core/Src/system_stm32f4xx.c
+
+
+
+# 编译过程中产生的中间文件与可执行固件
+*.elf
+*.hex
+*.bin
+*.map
+*.o
+*.obj
+*.d
+*.a
+
+
+# VS Code 缓存与本地个性化配置
+# 忽略 .vscode 下的局部缓存，但保留共享的工程配置
+.vscode/*
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/c_cpp_properties.json
+
+# C/C++ 插件的 Intellisense 索引缓存
+.vscode/ipch/
+.vscode/.browse.vc.db*
+
+# CMake Tools 生成的本地预设文件
+CMakeUserPresets.json
+
+# ==========================================
+# 3. STM32CubeMX & 操作系统临时文件
+# ==========================================
+*.bak
+*.tmp
+*~
+*.swp
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log%   
